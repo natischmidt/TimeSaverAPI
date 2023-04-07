@@ -1,7 +1,6 @@
-
 package com.example.clockbackend.Time;
-import org.springframework.stereotype.Component;
 
+import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -21,7 +20,7 @@ public class TimeRepo {
         return timeEntity;
     }
 
-    public Optional<TimeEntity> get(float time) {
+    public Optional<TimeEntity> get(String time) {
         return Optional.ofNullable(times.get(time));
     }
 

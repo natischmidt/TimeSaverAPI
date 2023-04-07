@@ -7,6 +7,8 @@ import lombok.*;
 
 public class TimeEntity {
 
+    //need an id to delete specific time later on
+    private String id;
     private float time;
 
 }
