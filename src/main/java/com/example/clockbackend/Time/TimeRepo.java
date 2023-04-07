@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 @Component
 public class TimeRepo {
 
-    Map<String, TimeRepo> times = new HashMap<>();
+    Map<Float, TimeEntity> times = new HashMap<>();
 
     public Stream<TimeEntity> all() {
         return times.values().stream();

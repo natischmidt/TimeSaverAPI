@@ -7,7 +7,6 @@ import lombok.*;
 
 public class TimeEntity {
 
-    private String id;
     private float time;
 
 }
