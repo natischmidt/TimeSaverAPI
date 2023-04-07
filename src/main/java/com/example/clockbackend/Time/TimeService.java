@@ -10,15 +10,14 @@ public class TimeService {
 
     TimeRepo timeRepo;
 
-
     public Stream<TimeEntity> all() {
         return timeRepo.all();
     }
 
+
     public void deleteTime(String id) {
         TimeEntity timeEntity = timeRepo.get(id).orElseThrow();
         timeRepo.delete(timeEntity);
-
 
     }
 }
