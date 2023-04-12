@@ -32,7 +32,7 @@ public class TimeController {
 //    }
 
 
-    private static Time toDTO(TimeEntity timeEntity) {
-        return new Time(timeEntity.getId(), timeEntity.getTime());
-    }
+//    private static Time toDTO(TimeEntity timeEntity) {
+//        return new Time(timeEntity.getUuid(), timeEntity.getTime());
+//    }
 }

@@ -2,21 +2,29 @@ package com.example.clockbackend.Time;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 
 @Service
 @AllArgsConstructor
+
 public class TimeService {
 
     TimeRepo timeRepo;
 
+    public TimeEntity Save() {
+        TimeEntity timeEntity = new TimeEntity(
+                        UUID.randomUUID()
+                );
+
+        timeRepo.save(timeEntity);
+        return timeEntity;
+    }
+
     public List<TimeEntity> all() {
         return timeRepo.findAll();
     }
+
 
     //Map<Float, TimeEntity> times = new HashMap<>();
 
