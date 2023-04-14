@@ -25,7 +25,6 @@ public class TimeService {
     }
 
     public List<TimeEntity> all() {
-
         return timeRepo.findAll();
     }
 

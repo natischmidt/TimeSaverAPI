@@ -9,7 +9,8 @@ import java.util.UUID;
 
 @Entity(name = "time")
 @Table(name = "Time")
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -21,11 +22,6 @@ public class TimeEntity {
     private UUID uuid;
     @Column(name = "time")
     private float time;
-
-
-    public TimeEntity(UUID uuid) {
-        this.uuid = uuid;
-    }
 
 }
 
