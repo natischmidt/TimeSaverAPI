@@ -1,6 +1,5 @@
 package com.example.clockbackend.Time;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,8 +19,15 @@ public class TimeController {
                 .orElse(null);
     }
 
-    //To get all the times saved
+    //delete time via id
+    @CrossOrigin
+    @DeleteMapping("/delete/{id}")
+    public Boolean DeleteTime(@PathVariable("id")Integer id) {
+        return timeService.Delete(id);
+    }
 
+
+    //To get all the times saved
     @CrossOrigin
     @GetMapping()
     public List<DTO> GetTimes() {

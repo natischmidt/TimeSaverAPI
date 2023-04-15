@@ -1,9 +1,8 @@
 package com.example.clockbackend.Time;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+
+import static jakarta.persistence.GenerationType.SEQUENCE;
 
 
 @Entity(name = "time")
@@ -16,10 +15,15 @@ import lombok.*;
 public class TimeEntity {
 
     //need an id to delete specific time later on
+
     @Id
-    @Column(name = "id")
+    @SequenceGenerator(name="timeSeq",sequenceName="TIME-SEQUENCE",allocationSize = 1)
+    @GeneratedValue(strategy=SEQUENCE,generator="timeSeq")
+    @Column(name = "ID")
     private Integer id;
-    @Column(name = "time")
+
+
+    @Column(name = "TIME")
     private Integer time;
 
 }

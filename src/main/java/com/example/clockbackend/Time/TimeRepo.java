@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface TimeRepo extends JpaRepository<TimeEntity, String> {
+public interface TimeRepo extends JpaRepository<TimeEntity, Integer> {
 
 
 }
