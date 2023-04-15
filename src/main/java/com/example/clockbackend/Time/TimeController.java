@@ -11,7 +11,7 @@ public class TimeController {
 
     TimeService timeService;
 
-    //To get all the times saved
+    //To save times
     @CrossOrigin
     @PostMapping()
     public DTO Saved(@RequestBody DTO dto) {
@@ -20,8 +20,10 @@ public class TimeController {
                 .orElse(null);
     }
 
+    //To get all the times saved
+
     @CrossOrigin
-    @GetMapping("times")
+    @GetMapping()
     public List<DTO> GetTimes() {
         return timeService.all()
                 .stream()
@@ -31,7 +33,7 @@ public class TimeController {
 
     private static DTO timesdto(TimeEntity timeEntity) {
         return new DTO(
-                timeEntity.getUuid(),
+                timeEntity.getId(),
                 timeEntity.getTime()
         );
     }

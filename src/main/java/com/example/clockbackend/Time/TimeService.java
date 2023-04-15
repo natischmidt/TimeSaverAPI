@@ -28,5 +28,13 @@ public class TimeService {
         return timeRepo.findAll();
     }
 
+    public Boolean Delete(UUID uuid) {
+        if (timeRepo.existsById(String.valueOf(uuid))) {
+            timeRepo.deleteById(String.valueOf(uuid));
+            return true;
+        }
+        return false;
+    }
+
 
 }

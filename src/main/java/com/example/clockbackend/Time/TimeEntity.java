@@ -5,7 +5,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
-import java.util.UUID;
 
 @Entity(name = "time")
 @Table(name = "Time")
@@ -18,10 +17,10 @@ public class TimeEntity {
 
     //need an id to delete specific time later on
     @Id
-    @Column(name = "uuid")
-    private UUID uuid;
+    @Column(name = "id")
+    private Integer id;
     @Column(name = "time")
-    private float time;
+    private Integer time;
 
 }
 
