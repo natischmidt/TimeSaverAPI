@@ -10,6 +10,10 @@ public class TimeController {
 
     TimeService timeService;
 
+    public TimeController(TimeService timeService) {
+        this.timeService = timeService;
+    }
+
     //To save times
     @CrossOrigin
     @PostMapping()
@@ -18,6 +22,7 @@ public class TimeController {
                 .map(TimeController::timesdto)
                 .orElse(null);
     }
+
 
     //delete time via id
     @CrossOrigin
